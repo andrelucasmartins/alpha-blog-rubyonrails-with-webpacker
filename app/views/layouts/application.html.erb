@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alpha Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= javascript_pack_tag 'application' %>
+    <%= stylesheet_pack_tag 'stylesheets' %>
+  </head>
+  <body>
+    <%=  render 'layouts/navigation' %>
+    <div class="container-fluid">
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+    </div>
+  </body>
+</html>
