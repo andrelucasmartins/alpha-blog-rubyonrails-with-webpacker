@@ -1,0 +1,40 @@
+
+<% if @article.errors.any?  %>
+    <h2>The following errors prevented the article from getting created</h2>
+    <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<div class="">
+    <div class="col-xs-12">
+        <%= form_for(@article, :html => {class: "form-horizontal offset-sm-3 ", role: "form"}) do |f|%>
+            <div class="form-group">
+                <div class="col-form-label col-sm-2">
+                    <%= f.label :title, class: 'text-muted' %>
+                </div>
+                <div class="col-sm-8">
+                    <%= f.text_field :title, class: 'form-control', placeholder: "Title of article", autofocus:  true %>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-form-label col-sm-2">
+                    <%= f.label :description %>
+                </div>
+                <div class="col-sm-8">
+                    <%= f.text_area :description, rows: 10, class: 'form-control', placeholder: "Body of article" %>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <%= f.submit "Save", class: 'btn btn-primary btn-lg'%>
+                </div>
+            </div>
+        <% end %>
+        <div class="col-4 offset-5">
+           [ <%= link_to "Cancel request and return to articles listing",  articles_path %> ]
+        </div>
+    </div>
+</div>
