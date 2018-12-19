@@ -16,7 +16,7 @@
 .jumbotron{
     background: red url('images/banner.png') no-repeat;
     background-size: cover;
-    max-height: calc(100% - 550px)
+    height: calc(100vw * (250 / 550))
 }
 
 .jumbotron h1 {
