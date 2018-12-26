@@ -1,3 +1,8 @@
 <h1 class="text-center">Listing all articles</h1>
-
+<div class="text-center">
+    <%= will_paginate @article, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
+</div>
 <%= render 'article', obj: @article %>
+<div class="text-center">
+    <%= will_paginate @article, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
+</div>

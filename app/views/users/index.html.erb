@@ -1,5 +1,7 @@
 <h1 class="text-center">All Alpha Bloggers</h1>
-
+<div class="text-center">
+    <%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
+</div>
 <% @users.each do |user| %>
     <div class="text-center pb-3">
         <div class="card col-md-4 offset-4">
@@ -15,3 +17,6 @@
         </div>
     </div>                    
 <% end %>
+<div class="text-center">
+    <%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
+</div>
