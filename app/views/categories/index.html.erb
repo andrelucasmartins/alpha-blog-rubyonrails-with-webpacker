@@ -1,6 +1,7 @@
 <h1 class="text-center">Listing All Categories</h1>
-<div align="center">
+<div class="d-flex justify-content-center">
     <%= will_paginate %>
+</div>
 
 <% @categories.each do |category| %>
     <div class="text-center pb-3">
@@ -14,5 +15,6 @@
     </div>
 <% end %>
 
+<div class="d-flex justify-content-center">
     <%= will_paginate %>
 </div>
