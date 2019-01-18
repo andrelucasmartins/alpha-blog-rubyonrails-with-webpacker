@@ -1,0 +1,8 @@
+<h1 class="text-center"><%= "Category: "+ @category.name %></h1>
+<div class="text-center">
+    <%= will_paginate @category_articles, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
+</div>
+<%= render 'articles/article', obj: @category_articles %>
+<div class="text-center">
+    <%= will_paginate @category_articles, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
+</div>

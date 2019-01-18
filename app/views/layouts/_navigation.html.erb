@@ -31,7 +31,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to 'All Categories', categories_path, class: 'dropdown-item'%>
           <% Category.all.each do |category| %>
-            <%= link_to "#{category.name}", categories_path(category), class: 'dropdown-item' %>
+            <%= link_to "#{category.name}", category_path(category), class: 'dropdown-item' %>
           <% end %>
           <% if logged_in? and current_user.admin? %>
             <div class="dropdown-divider"></div>
